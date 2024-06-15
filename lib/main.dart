@@ -1,7 +1,7 @@
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
+import 'package:space_shoooter/ViewModel/space_shooter_game.dart';
 
 void main() {
-  final game = FlameGame();
-  runApp(GameWidget(game: game));
+  runApp(GameWidget(game: SpaceShooterGame()));
 }
