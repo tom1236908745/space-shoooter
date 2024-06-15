@@ -1,0 +1,14 @@
+name: space_shoooter
+description: "this app is Space game, following FLAME's tutorial"
+publish_to: 'none' 
+
+version: 0.0.0
+
+environment:
+  sdk: ^3.0.0
+  flutter: ^3.13.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flame: ^1.17.0
