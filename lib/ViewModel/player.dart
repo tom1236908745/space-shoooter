@@ -1,11 +1,23 @@
 import 'package:flame/components.dart';
-import 'package:flutter/material.dart';
+import 'package:space_shoooter/ViewModel/space_shooter_game.dart';
 
-class Player extends PositionComponent {
-  static final _paint = Paint()..color = Colors.white;
+class Player extends SpriteComponent with HasGameRef<SpaceShooterGame> {
+  Player()
+      : super(
+          size: Vector2(100, 150),
+          anchor: Anchor.center,
+        );
 
   @override
-  void render(Canvas canvas) {
-    canvas.drawRect(size.toRect(), _paint);
+  Future<void> onLoad() async {
+    await super.onLoad();
+
+    sprite = await gameRef.loadSprite('player-sprite.png');
+
+    position = gameRef.size / 2;
+  }
+
+  void move(Vector2 delta) {
+    position.add(delta);
   }
 }
