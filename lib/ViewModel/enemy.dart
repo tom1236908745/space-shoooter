@@ -2,6 +2,7 @@ import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:space_shoooter/ViewModel/bullet.dart';
 import 'package:space_shoooter/ViewModel/explosion.dart';
+import 'package:space_shoooter/ViewModel/player.dart';
 import 'package:space_shoooter/ViewModel/space_shooter_game.dart';
 
 class Enemy extends SpriteComponent
@@ -43,6 +44,11 @@ class Enemy extends SpriteComponent
 
     if (other is Bullet) {
       removeFromParent();
+      other.removeFromParent();
+      game.add(Explosion(position: position));
+    }
+
+    if (other is Player) {
       other.removeFromParent();
       game.add(Explosion(position: position));
     }

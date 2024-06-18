@@ -1,3 +1,4 @@
+import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:space_shoooter/ViewModel/bullet.dart';
 import 'package:space_shoooter/ViewModel/space_shooter_game.dart';
@@ -39,6 +40,11 @@ class Player extends SpriteAnimationComponent
         });
 
     game.add(_bulletSpawner);
+    add(
+      RectangleHitbox(
+        collisionType: CollisionType.passive,
+      ),
+    );
   }
 
   void move(Vector2 delta) {
