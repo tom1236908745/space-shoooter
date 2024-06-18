@@ -4,25 +4,20 @@ import 'package:space_shoooter/ViewModel/bullet.dart';
 import 'package:space_shoooter/ViewModel/explosion.dart';
 import 'package:space_shoooter/ViewModel/space_shooter_game.dart';
 
-class Enemy extends SpriteAnimationComponent
+class Enemy extends SpriteComponent
     with HasGameReference<SpaceShooterGame>, CollisionCallbacks {
   Enemy({
     super.position,
   }) : super(size: Vector2.all(enemySize), anchor: Anchor.center);
 
-  static const enemySize = 50.0;
+  static const enemySize = 90.0;
 
   @override
   Future<void> onLoad() async {
     await super.onLoad();
 
-    animation = await game.loadSpriteAnimation(
-      'enemy1.png',
-      SpriteAnimationData.sequenced(
-        amount: 4,
-        stepTime: .2,
-        textureSize: Vector2.all(16),
-      ),
+    sprite = await game.loadSprite(
+      'enemy3.png',
     );
 
     add(RectangleHitbox());

@@ -14,9 +14,8 @@ class SpaceShooterGame extends FlameGame
   @override
   Future<void> onLoad() async {
     final parallax = await loadParallaxComponent([
-      ParallaxImageData(('maru1.png')),
-      ParallaxImageData(('maru2.png')),
-      ParallaxImageData(('maru3.png')),
+      ParallaxImageData(('stars.png')),
+      ParallaxImageData(('stars.png')),
     ],
         baseVelocity: Vector2(0, -5),
         repeat: ImageRepeat.repeat,
@@ -28,11 +27,12 @@ class SpaceShooterGame extends FlameGame
     add(player);
 
     add(
-      SpawnComponent(
+      SpawnComponent.periodRange(
         factory: (index) {
           return Enemy();
         },
-        period: 1,
+        minPeriod: .3,
+        maxPeriod: 1,
         area: Rectangle.fromLTWH(0, 0, size.x, -Enemy.enemySize),
       ),
     );

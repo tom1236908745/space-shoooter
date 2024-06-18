@@ -6,7 +6,7 @@ class Explosion extends SpriteAnimationComponent
   Explosion({
     super.position,
   }) : super(
-          size: Vector2.all(150),
+          size: Vector2.all(30),
           anchor: Anchor.center,
           removeOnFinish: true,
         );
@@ -18,7 +18,7 @@ class Explosion extends SpriteAnimationComponent
     animation = await game.loadSpriteAnimation(
       'explosion.png',
       SpriteAnimationData.sequenced(
-        amount: 6,
+        amount: 10,
         stepTime: .1,
         textureSize: Vector2.all(32),
         loop: false,

@@ -2,8 +2,7 @@ import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:space_shoooter/ViewModel/space_shooter_game.dart';
 
-class Bullet extends SpriteAnimationComponent
-    with HasGameReference<SpaceShooterGame> {
+class Bullet extends SpriteComponent with HasGameReference<SpaceShooterGame> {
   Bullet({
     super.position,
   }) : super(
@@ -15,13 +14,7 @@ class Bullet extends SpriteAnimationComponent
   Future<void> onLoad() async {
     await super.onLoad();
 
-    animation = await game.loadSpriteAnimation(
-        'fire_orange.png',
-        SpriteAnimationData.sequenced(
-          amount: 4,
-          stepTime: .2,
-          textureSize: Vector2(8, 16),
-        ));
+    sprite = await game.loadSprite('fire_orange.png');
 
     add(
       RectangleHitbox(
