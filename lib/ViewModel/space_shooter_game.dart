@@ -38,16 +38,19 @@ class SpaceShooterGame extends FlameGame
     );
   }
 
+  // ドラッグで動かしたタイミング
   @override
   void onPanUpdate(DragUpdateInfo info) {
     player.move(info.delta.global);
   }
 
+  // ドラッグを開始したタイミング
   @override
   void onPanStart(DragStartInfo info) {
     player.startShooting();
   }
 
+  // ドラッグを止めた時
   @override
   void onPanEnd(DragEndInfo info) {
     player.stopShooting();
