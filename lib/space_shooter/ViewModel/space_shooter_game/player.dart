@@ -1,7 +1,7 @@
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
-import 'package:space_shoooter/ViewModel/bullet.dart';
-import 'package:space_shoooter/ViewModel/space_shooter_game.dart';
+import 'package:space_shoooter/space_shooter/ViewModel/space_shooter_game/bullet.dart';
+import 'package:space_shoooter/space_shooter/ViewModel/space_shooter_game/space_shooter_game.dart';
 
 class Player extends SpriteAnimationComponent
     with HasGameReference<SpaceShooterGame> {

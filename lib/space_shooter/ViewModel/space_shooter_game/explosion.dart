@@ -1,5 +1,5 @@
 import 'package:flame/components.dart';
-import 'package:space_shoooter/ViewModel/space_shooter_game.dart';
+import 'package:space_shoooter/space_shooter/ViewModel/space_shooter_game/space_shooter_game.dart';
 
 class Explosion extends SpriteAnimationComponent
     with HasGameReference<SpaceShooterGame> {

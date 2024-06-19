@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:space_shoooter/View/space_shooter.dart';
+import 'package:space_shoooter/space_shooter/View/space_shooter.dart';
 
 void main() => runApp(MyApp());
 
