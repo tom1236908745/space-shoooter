@@ -1,10 +1,12 @@
 import 'package:flame/game.dart';
 import 'package:flutter/widgets.dart';
-import 'package:space_shoooter/space_shooter/ViewModel/space_shooter_game/space_shooter_game.dart';
+import 'package:space_shoooter/ember_quest_game/ViewModel/ember_quest.dart';
 
 class EmberQuest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GameWidget(game: SpaceShooterGame());
+    return const GameWidget<EmberQuestGame>.controlled(
+      gameFactory: EmberQuestGame.new,
+    );
   }
 }

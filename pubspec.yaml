@@ -5,6 +5,7 @@ publish_to: 'none'
 flutter:
   assets:
     - assets/images/
+    - assets/images/ember-quest/
 
 version: 0.0.0
 
