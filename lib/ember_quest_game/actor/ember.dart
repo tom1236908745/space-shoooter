@@ -2,6 +2,7 @@ import 'package:flame/components.dart';
 import 'package:space_shoooter/ember_quest_game/ViewModel/ember_quest.dart';
 import 'package:space_shoooter/ember_quest_game/utils/formatImagePath.dart';
 
+/// 主人公 `ember` くん
 class EmberPlayer extends SpriteAnimationComponent
     with HasGameReference<EmberQuestGame> {
   EmberPlayer({
