@@ -20,6 +20,7 @@ class EmberQuestGame extends FlameGame {
       formatImagePath('water_enemy.png'),
     ]);
 
+    // カメラの位置を画面左上に固定
     camera.viewfinder.anchor = Anchor.topLeft;
 
     _ember = EmberPlayer(
